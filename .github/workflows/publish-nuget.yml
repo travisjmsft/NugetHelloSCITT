@@ -25,8 +25,8 @@ jobs:
     - name: Build
       run: | 
         dotnet build --configuration Release 
-        dotnet pack
+        dotnet pack --configuration Release --output .
  
     - name: Publish
       run: |
-        dotnet nuget push TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY_INT }} --source ${{ env.NUGET_URL }}
+        dotnet nuget push NugetHelloSCITT\TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY_INT }} --source ${{ env.NUGET_URL }}
