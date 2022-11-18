@@ -29,4 +29,4 @@ jobs:
  
     - name: Publish
       run: |
-        dotnet nuget push NugetHelloSCITT\TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY_INT }} --source ${{ env.NUGET_URL }}
+        dotnet nuget push TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.NUGET_API_KEY_INT }} --source ${{ env.NUGET_URL }}
