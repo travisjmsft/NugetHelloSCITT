@@ -9,6 +9,8 @@
     <TargetFramework>net7.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RepositoryUrl>https://github.com/travisjmsft/NugetHelloSCITT</RepositoryUrl>
+    <PackageDescription>A trivial example attempting to connect data from SCITT with NuGet packages</PackageDescription>
   </PropertyGroup>
 
   <ItemGroup>
