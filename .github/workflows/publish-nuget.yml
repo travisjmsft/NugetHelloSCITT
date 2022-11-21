@@ -34,7 +34,7 @@ jobs:
 
     - name: NuGet Pack
       run: | 
-        dotnet pack --configuration Release --no-build --output .
+        dotnet pack --no-build --output .
  
     - name: NuGet Publish
       run: |
