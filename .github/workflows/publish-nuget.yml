@@ -39,3 +39,9 @@ jobs:
     - name: NuGet Publish
       run: |
         dotnet nuget push TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.GH_NUGET_PAT }} --source "https://nuget.pkg.github.com/travisjmsft/index.json" --skip-duplicate
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        path: buildOutput
+        
