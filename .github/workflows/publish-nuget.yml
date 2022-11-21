@@ -29,4 +29,4 @@ jobs:
  
     - name: Publish
       run: |
-        dotnet nuget push TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.GH_NUGET_PAT }} --source "https://nuget.pkg.github.com/travisjmsft/index.json"
+        dotnet nuget push TravisJCo.HelloSCITT.0.1.0.nupkg --api-key ${{ secrets.GH_NUGET_PAT }} --source "https://nuget.pkg.github.com/travisjmsft/index.json" --skip-duplicate
