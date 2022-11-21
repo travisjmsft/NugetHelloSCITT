@@ -24,18 +24,17 @@ jobs:
 
     - name: Build
       run: | 
-        dotnet build --configuration Release 
+        dotnet build --configuration Release --output buildOutput 
         
-    - name: NuGet Pack
-      run: | 
-        dotnet pack --configuration Release --output .
-      
     - name: Generate SBOM
       run: |
         curl -Lo $RUNNER_TEMP/sbom-tool https://github.com/microsoft/sbom-tool/releases/latest/download/sbom-tool-linux-x64
         chmod +x $RUNNER_TEMP/sbom-tool
         $RUNNER_TEMP/sbom-tool generate -b ./buildOutput -bc . -pn NugetHelloSCITT -pv 1.0.0 -ps TravisJCo -nsb https://sbom.travisjco.com
 
+    - name: NuGet Pack
+      run: | 
+        dotnet pack --configuration Release --no-build --output .
  
     - name: NuGet Publish
       run: |
