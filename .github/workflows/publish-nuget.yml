@@ -34,7 +34,7 @@ jobs:
 
     - name: NuGet Pack
       run: | 
-        dotnet pack --no-build --output .
+        dotnet pack --no-build --output . /p:OutputPath=buildOutput
  
     - name: NuGet Publish
       run: |
